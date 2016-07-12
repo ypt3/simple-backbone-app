@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="js/lib/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <script src="js/lib/jquery-min.js"></script>
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="js/lib/backbone-min.js"></script>
+        <script src="js/lib/mustache.js"></script>
+
+        <script type="text/javascript" src="js/todoItem.js"></script>
+        <script type="text/javascript" src="js/todoItems.js"></script>
+        <script type="text/javascript" src="js/todoItemView.js"></script>
+        <script type="text/javascript" src="js/todoItemsView.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <script type="text/html" id="todoItemTemplate">
+            <label>
+                <input type="checkbox" {{#completed}}checked{{/completed}} id="toggle">
+                {{title}}
+            </label>
+            <button id="delete">Delete</button>
+        </script>
+
+        <script type="text/html" id="todoItemsTemplate">
+            <header id="addNewTodoItem">
+                    <input type="text" autofocus id="newTodoItem" placeholder="What is the next task?">
+            </header>
+            <ul id="todoItems"></ul>
+        </script>
+    </body>
+</html>
